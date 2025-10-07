@@ -1,0 +1,23 @@
+import { useState } from "react"
+
+function TodoForm({addTodo}){
+    const [value,setValue] = useState("")
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if(!value.trim()) return
+        addTodo(value)
+        setValue("")
+    }
+
+    return(
+        <form onSubmit={handleSubmit}>
+            <input type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Tambahkan tugas"/>
+            <button type="submit">
+                tambah
+            </button>
+        </form>
+    )
+}
+
+export default TodoForm
