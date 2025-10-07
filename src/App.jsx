@@ -5,11 +5,7 @@ import TodoFilter from './components/TodoFilter';
 import './App.css'; // Import file CSS
 
 function App() {
-  const [todos, setTodos] = useState([
-    { text: 'Belajar React Hooks', isCompleted: true },
-    { text: 'Membuat Aplikasi Todo', isCompleted: false },
-    { text: 'Deploy ke Netlify', isCompleted: false },
-  ]);
+  const [todos, setTodos] = useState([]);
   const [filter, setFilter] = useState('All'); 
 
   const addTodo = (text) => {

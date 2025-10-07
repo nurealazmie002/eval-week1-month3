@@ -1,4 +1,3 @@
-import React from 'react';
 
 function TodoFilter({ currentFilter, setFilter }) {
   const filters = ['All', 'Active', 'Completed'];
